@@ -370,3 +370,44 @@ header {
     margin-bottom: 5px;
 }
 
+
+/* -------------------------------------------------*/
+/* CUSTOMER TESTIMONIALS */
+/* --------------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative; /* if we don't do this the quotes won't appear where we want it */
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block; /* by making it block we can give it a position */
+    position: absolute; /* when we make something have an absolute position we have to make sure its parent has a relative position */
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%; /* makes it round */
+    margin-right: 10px;
+    vertical-align: middle;
+}
