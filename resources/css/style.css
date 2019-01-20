@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-html,body {
+html, body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -17,6 +17,7 @@ html,body {
     font-size: 20px;
     text-rendering: optimizeLegibility; /* for fonts to render well */
     overflow-x: hidden; 
+    scroll-behavior: smooth; /* using this as jquery code for the smooth scrolling is not working */
 }
 
 .clearfix {
@@ -201,7 +202,7 @@ input[type=submit]:active {
 /* --------------------------------------------------*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* make the image darker and transparent */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg); /* make the image darker and transparent */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -225,6 +226,17 @@ header {
     margin-top: 20px;
 }
 
+
+.logo-black { 
+    display: none;  /* Not visible in the normal state */
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+} 
+
+/* Main navi */
+
 .main-nav {
     float: right;
     list-style-type: none;
@@ -236,16 +248,14 @@ header {
     margin-left: 40px;
 }
 
-.main-nav li a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 90%;
-    padding: 8px 0px;
-}
-
+.main-nav li a,
 .main-nav li a:link,
 .main-nav li a:visited {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
     border-bottom: 2px solid transparent;   /* it will not be visible until we hover over it */
     transition: border-bottom 0.2s; 
 }
@@ -255,6 +265,48 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/* Mobile Navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky Navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 2px #efefef; /* 0 x-axis 2px y-axis 2px blur color */
+    z-index: 9999; /* vertical stacking of elements - ensure the sticky navigation is always at the top of all elements */
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a,
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+    padding: 18px 0;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
 
 /* -------------------------------------------------*/
 /* FEATURES */
@@ -381,7 +433,7 @@ header {
 /* --------------------------------------------------*/
 
 .section-testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -587,3 +639,20 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
+
+/* -------------------------------------------------*/
+/* ANIMATIONS */
+/* --------------------------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0; /* this makes it invisible */
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated { /* having both classes at the same time */
+    
+}
+
