@@ -12,3 +12,8 @@ CSS Libraries used:
 JavaScript Libraries used:
 
   jQuery, Respond, html5shiv, selectivizr
+ 
+ 
+Course included a very quick intro to 
+
+  Basic Search Engine Optimisation (SEO), performance optimsation: site speed, Google Analytics, and cPanel.
