@@ -6,12 +6,6 @@ $(document).ready(function () {
     $('.js--section-features').waypoint(function(direction) {
         if (direction === "down") {
             $('nav').addClass('sticky');
-            
-            var width = $(window).width();
-            
-            if(width <= 320) {
-                $('.hero-text-box').css("margin-top", "60px");
-            }
         } else {
             $('nav').removeClass('sticky');
         }
