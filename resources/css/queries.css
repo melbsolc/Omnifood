@@ -139,11 +139,11 @@
 /* Small phones: from 0 to 320px */
 @media only screen and (max-width: 320px) {
     
-    .hero-text-box { margin-top: 50px; }
+    .hero-text-box { margin-top: 70px; }
     
     .btn-full:link,
     .btn-full:visited {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
     }
     
     section { padding: 25px 0; }
