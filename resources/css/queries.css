@@ -128,8 +128,27 @@
 }
 
 
-/* Small phones: from 0 to 480px */
+/* Small phones: from 320 to 480px */
 @media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    .contact-form { width: 100%; }
+    footer { font-size: 74%; }
+    .footer-nav li { margin-bottom: 14px; }
+}
+
+/* Small phones: from 0 to 320px */
+@media only screen and (max-width: 320px) {
+    
+    .hero-text-box { 
+        margin-top: 30px;
+        /*padding-top: 30px; */
+    }
+    
+    .btn-full:link,
+    .btn-full:visited {
+        margin-bottom: 5px;
+    }
+    
     section { padding: 25px 0; }
     .contact-form { width: 100%; }
     footer { font-size: 74%; }
